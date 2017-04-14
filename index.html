@@ -24,7 +24,8 @@
                 Resistance is futile.
                 </p>
                 
-                sample buttons and icons
+                <div class="button1">Button 1</div>
+                <div class="button2">Button 2</div>
                 
                 <hr>
                 
@@ -51,17 +52,84 @@
                 </div>  
                 
                 <hr>
+                
+                <h3>imagery</h3>
 
-                photo samples
+                <div class="p_position">
+                    <div class="s-block" id="img1">
+                        <div class="within" style="background-image: url(isometricexample1.jpg)"></div>
+                    </div>
 
-                logo
+                    <div class="s-block" id="img2">
+                        <div class="within" style="background-image: url(isometricexample2.jpg); bakcground-position: center center;"></div>
+                    </div>
 
-                designer notes
-                - sleek, simplistic, minimalist
+                </div>
+
+                <center><img src="unnamed.png"></center>
             </div>
         </div>
         
         <script>
+            
+            var img1 = document.getElementById("img1");
+            
+            img1.addEventListener("click", function(){
+                
+                var cover = document.createElement("div");
+                var l_img = document.createElement("div");
+                
+                cover.style.width = "100vw";
+                cover.style.height = "100vh";
+                cover.style.backgroundColor = "#000000";
+                cover.style.margin = "-10px";
+                cover.style.position = "fixed";
+                cover.style.overflow = "hidden";
+                
+                document.body.appendChild(cover);
+                
+                l_img.className = "more";
+                l_img.innerHTML = "<img src='isometricexample1.jpg'/>";
+                cover.appendChild(l_img);
+                
+                cover.addEventListener("click", function(){
+                    
+                    document.body.removeChild(this);
+                    
+                });
+                
+                
+            })
+            
+            var img2 = document.getElementById("img2");
+            
+            img2.addEventListener("click", function(){
+                
+                var cover = document.createElement("div");
+                var l_img = document.createElement("div");
+                
+                cover.style.width = "100vw";
+                cover.style.height = "100vh";
+                cover.style.backgroundColor = "#000000";
+                cover.style.margin = "-10px";
+                cover.style.position = "fixed";
+                cover.style.overflow = "hidden";
+                
+                document.body.appendChild(cover);
+                
+                l_img.className = "more2";
+                l_img.innerHTML = "<img src='isometricexample2.jpg'/>";
+                cover.appendChild(l_img);
+                
+                cover.addEventListener("click", function(){
+                    
+                    document.body.removeChild(this);
+                    
+                });
+                
+                
+            })
+            
         </script>
     </body>
 </html>
